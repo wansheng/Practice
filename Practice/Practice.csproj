@@ -63,6 +63,9 @@
     <Content Include="01ToDo\Todo.js" />
     <Content Include="02oData\oDataController.js" />
     <Content Include="02oData\SimpleOData.html" />
+    <Content Include="03FireBase\HtmlPage1.html" />
+    <Content Include="03FireBase\Todo.html" />
+    <Content Include="03FireBase\Todo.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
