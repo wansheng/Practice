@@ -59,6 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="01ToDo\Todo.html" />
+    <Content Include="01ToDo\Todo.js" />
+    <Content Include="02oData\oDataController.js" />
+    <Content Include="02oData\SimpleOData.html" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
