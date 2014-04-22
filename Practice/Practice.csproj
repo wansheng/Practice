@@ -66,6 +66,9 @@
     <Content Include="03FireBase\HtmlPage1.html" />
     <Content Include="03FireBase\Todo.html" />
     <Content Include="03FireBase\Todo.js" />
+    <Content Include="04FireBaseModule\HtmlPage1.html" />
+    <Content Include="04FireBaseModule\Todo.html" />
+    <Content Include="04FireBaseModule\Todo.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />

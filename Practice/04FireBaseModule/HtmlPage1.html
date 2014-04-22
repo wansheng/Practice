@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <script>
+        //*
+        var fb = new Firebase('https://sweltering-fire-4693.firebaseio.com/');
+        fb.push({ desc: "aa", done: false, dueDate: "2014-04-18" });
+        /*
+        var todos = [];
+        todos.push({ desc: "aa", done: false, dueDate: "2014-04-18" });
+        todos.push({ desc: "bb", done: false, dueDate: "2014-04-18" });
+        fb.set({ todos: todos });
+        fb.on('value', function (snapshot) {
+            var k = snapshot.val().todos;
+
+        });
+
+        //*/
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

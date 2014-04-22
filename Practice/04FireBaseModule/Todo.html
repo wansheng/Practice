@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="Todo.js"></script>
+    <!-- add firebase scripts-->
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <style>
+        .done-true {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+   
+</head>
+<body>
+    <div ng-controller="todoController">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="todo in todos">
+                <tr>
+                    <td><input type="checkbox" ng-model=todo.done /></td>
+                    <td><span class="done-{{todo.done}}">{{todo.desc}}</span></td>
+                    <td>{{todo.dueDate | date:'fullDate'}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-pluralize count="remaining()" when="pluralizer"></ng-pluralize>
+        <form ng-submit="addToDo()">
+            <input type="text" ng-model="todoText" placeholder="add new todo here" />
+            <input type="text" ng-model="todoDueDate" placeholder="yyyy-MM-dd" />
+            <input type="submit" value="add" />
+            <br />
+            {{updated}}
+            <br/>
+            <br />
+            {{newValue}}
+            <br />
+            <br /><br />
+            {{oldValue}}
+        </form>
+    </div>
+</body>
+</html>
