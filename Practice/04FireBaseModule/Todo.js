@@ -1,8 +1,18 @@
-﻿function todoController($scope) {
-    $scope.fb = new Firebase('https://sweltering-fire-4693.firebaseio.com/todos/');
+﻿var ngFirebase = angular.module("ngFirebase", []);
+
+ngFirebase.factory("aFirebaseFactory", function () {
+    return{
+        fb: function() {
+            return new Firebase('https://sweltering-fire-4693.firebaseio.com/todos/');
+        } 
+    };
+});
+
+ngFirebase.controller("todoController", function ($scope,aFirebaseFactory) {
+    $scope.fb = aFirebaseFactory.fb();
     $scope.todos = [];
     $scope.initialed = false;
- 
+
     $scope.fb.on('value', fbValueChanged);
     function fbValueChanged(snapeshot) {
         $scope.todos = snapeshot.val();
@@ -22,8 +32,7 @@
         });
         return result;
     }, function (newValue, oldValue) {
-        if ($scope.initialed == true)
-        {
+        if ($scope.initialed == true) {
             $scope.fb.set($scope.todos);
         }
     });
@@ -37,6 +46,6 @@
     $scope.pluralizer = {
         0: "Finished all",
         1: "Only one left! GJ",
-        other:"{} items remain in your todo list."
+        other: "{} items remain in your todo list."
     }
-}
+});
