@@ -2,7 +2,7 @@
     
     $scope.todos = [];
     $scope.initialed = false;
-    $scope.debugResponse = 'not initial';
+    $scope.debugResponse = '';
     initial();
 
     function initial() {
