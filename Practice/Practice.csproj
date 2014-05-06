@@ -68,6 +68,8 @@
     <Content Include="03FireBase\Todo.js" />
     <Content Include="04FireBaseModule\Todo.html" />
     <Content Include="04FireBaseModule\Todo.js" />
+    <Content Include="05Http\Todo.html" />
+    <Content Include="05Http\Todo.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -358,6 +360,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
