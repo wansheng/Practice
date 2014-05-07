@@ -68,6 +68,8 @@
     <Content Include="03FireBase\Todo.js" />
     <Content Include="04FireBaseModule\Todo.html" />
     <Content Include="04FireBaseModule\Todo.js" />
+    <Content Include="07Resource\Todo.html" />
+    <Content Include="07Resource\Todo.js" />
     <Content Include="06HttpModule\Todo.html" />
     <Content Include="05Http\Todo.js" />
     <Content Include="05Http\Todo.html" />
