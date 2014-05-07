@@ -259,3 +259,4 @@
 /// <reference path="../04firebasemodule/todo.js" />
 /// <reference path="../03firebase/todo.js" />
 /// <reference path="../05http/todo.js" />
+/// <reference path="../06httpmodule/todo.js" />
