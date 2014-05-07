@@ -7,10 +7,10 @@ ngTodo.factory("TodoFactory", function ($http) {
             .success(function (data, status, headers, config) {
                 // this callback will be called asynchronously
                 // when the response is available
-                var a = data;
+                //var a = data;
                 todos = [];
-                for (var i in a) {
-                    todos.push(a[i]);
+                for (var i in data) {
+                    todos.push(data[i]);
                 }
                 $scope.Todos = todos;
             }).error(function (data, status, headers, config) {

@@ -10,10 +10,10 @@
             .success(function (data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
-        var a = data;
+        
         $scope.todos = [];
-        for (var i in a) {
-            $scope.todos.push(a[i]);
+        for (var i in data) {
+            $scope.todos.push(data[i]);
         }
     }).error(function (data, status, headers, config) {
         // called asynchronously if an error occurs
