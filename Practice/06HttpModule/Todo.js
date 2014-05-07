@@ -1,6 +1,6 @@
 ﻿var ngTodo = angular.module("ngTodo", []);
 
-ngTodo.factory("TodoFactory", function ($http) {
+ngTodo.factory("TodoOperator", function ($http) {
     return {
         'getTodo': function ($scope) {
             $http({ method: 'GET', url: 'https://sweltering-fire-4693.firebaseio.com/todos/.json' })
@@ -33,7 +33,7 @@ ngTodo.factory("TodoFactory", function ($http) {
     }
 })
 
-ngTodo.controller("todoController", function ($scope, TodoFactory) {
+ngTodo.controller("todoController", function ($scope, TodoOperator) {
 
     $scope.Todos = [];
     $scope.Initialed = false;
@@ -41,11 +41,11 @@ ngTodo.controller("todoController", function ($scope, TodoFactory) {
     initial();
 
     function initial() {
-        TodoFactory.getTodo($scope);
+        TodoOperator.getTodo($scope);
     }
     $scope.addToDo = function () {
         $scope.newTodo = { desc: $scope.todoText, done: false, dueDate: $scope.todoDueDate };
-        TodoFactory.postTodo($scope);
+        TodoOperator.postTodo($scope);
     };
 
     $scope.remaining = function () {
