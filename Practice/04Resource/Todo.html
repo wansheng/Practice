@@ -40,13 +40,8 @@
             <input type="text" ng-model="todoDueDate" placeholder="yyyy-MM-dd" />
             <input type="submit" value="add" />
             <br />
-            {{updated}}
             <br />
-            <br />
-            {{newValue}}
-            <br />
-            <br /><br />
-            {{oldValue}}
+            <input type="button" ng-click="RemoveCompleted()" value="Remove Completed Tasks" />
         </form>
         {{DebugResponse}}
     </div>
