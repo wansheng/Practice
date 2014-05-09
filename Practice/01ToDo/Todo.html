@@ -22,19 +22,21 @@
                     <th>Due Date</th>
                 </tr>
             </thead>
-            <tbody ng-repeat="todo in todos">
+            <tbody ng-repeat="todo in Todos">
                 <tr>
-                    <td><input type="checkbox" ng-model=todo.done /></td>
-                    <td><span class="done-{{todo.done}}">{{todo.desc}}</span></td>
-                    <td>{{todo.dueDate | date:'fullDate'}}</td>
+                    <td><input type="checkbox" ng-model=todo.Done /></td>
+                    <td><span class="done-{{todo.Done}}">{{todo.Desc}}</span></td>
+                    <td>{{todo.DueDate | date:'fullDate'}}</td>
                 </tr>
             </tbody>
         </table>
-        <ng-pluralize count="remaining()" when="pluralizer"></ng-pluralize>
-        <form ng-submit="addToDo()">
-            <input type="text" ng-model="todoText" placeholder="add new todo here" />
-            <input type="text" ng-model="todoDueDate" placeholder="yyyy-MM-dd" />
+        <ng-pluralize count="Remaining()" when="pluralizer"></ng-pluralize>
+        <form ng-submit="AddToDo()">
+            <input type="text" ng-model="TodoText" placeholder="add new todo here" />
+            <input type="text" ng-model="TodoDueDate" placeholder="yyyy-MM-dd" />
             <input type="submit" value="add" />
+            <br />
+            <input type="button" ng-click="RemoveCompleted()" value="Remove Completed Tasks" />
         </form>
 
     </div>
