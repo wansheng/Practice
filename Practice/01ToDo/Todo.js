@@ -31,8 +31,6 @@
     function now() {
         var d = new Date();
         return d.getFullYear() + '-' + format2Digits(d.getMonth() + 1) + '-' + format2Digits(d.getDate());
-       
-
     }
     function format2Digits(int2Format)
     {
