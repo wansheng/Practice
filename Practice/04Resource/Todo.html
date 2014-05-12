@@ -5,14 +5,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
     <script src="Todo.js"></script>
+    <script src="Utility.js"></script>
     <style>
         .done-true {
             text-decoration: line-through;
             color: gray;
         }
     </style>
-
-
 </head>
 <body>
     <div ng-controller="todoController">
@@ -27,23 +26,23 @@
             </thead>
             <tbody ng-repeat="todo in Todos">
                 <tr>
-                    <td><input type="checkbox" ng-model=todo.done /></td>
-                    <td><span class="done-{{todo.done}}">{{todo.desc}}</span></td>
-                    <td>{{todo.dueDate | date:'fullDate'}}</td>
+                    <td><input type="checkbox" ng-model=todo.Done /></td>
+                    <td><span class="done-{{todo.Done}}">{{todo.Desc}}</span></td>
+                    <td>{{todo.DueDate | date:'fullDate'}}</td>
                 </tr>
             </tbody>
         </table>
-        <ng-pluralize count="remaining()" when="pluralizer"></ng-pluralize>
+        <ng-pluralize count="Remaining()" when="Pluralizer"></ng-pluralize>
 
-        <form ng-submit="addToDo()">
-            <input type="text" ng-model="todoText" placeholder="add new todo here" />
-            <input type="text" ng-model="todoDueDate" placeholder="yyyy-MM-dd" />
+        <form ng-submit="AddToDo()">
+            <input type="text" ng-model="TodoText" placeholder="add new todo here" />
+            <input type="text" ng-model="TodoDueDate" placeholder="yyyy-MM-dd" />
             <input type="submit" value="add" />
             <br />
             <br />
             <input type="button" ng-click="RemoveCompleted()" value="Remove Completed Tasks" />
         </form>
-        {{DebugResponse}}
+        {{debugResponse}}
     </div>
 </body>
 </html>
