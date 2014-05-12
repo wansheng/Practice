@@ -69,7 +69,7 @@ ngTodo.controller("todoController", function ($scope, TodoOperator) {
     $scope.Remaining = function () {
         var count = 0;
         angular.forEach($scope.Todos, function (todo) {
-            count += todo.done ? 0 : 1;
+            count += todo.Done ? 0 : 1;
         });
         return count;
     };
