@@ -31,7 +31,7 @@
                     <td><input type="checkbox" ng-model=todo.Done /></td>
                     <td><span class="done-{{todo.Done}}">{{todo.Desc}}</span></td>
                     <td>{{todo.DueDate | date:'fullDate'}}</td>
-                    <td><input type="button" ng-click="DeleteTodo(todo)" value="Delete"/></td>
+                    <td><delete-button>Remove</delete-button></td>
                 </tr>
             </tbody>
         </table>

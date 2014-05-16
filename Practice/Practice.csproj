@@ -62,9 +62,12 @@
     <Content Include="01ToDo\Todo.html" />
     <Content Include="01ToDo\Todo.js" />
     <Content Include="02Http\Utility.js" />
-    <Content Include="05.1PrepareForDirective\Todo.html" />
-    <Content Include="05.1PrepareForDirective\Todo.js" />
-    <Content Include="05.1PrepareForDirective\Utility.js" />
+    <Content Include="05Directive\05.2Simple\Todo.html" />
+    <Content Include="05Directive\05.2Simple\Todo.js" />
+    <Content Include="05Directive\05.2Simple\Utility.js" />
+    <Content Include="05Directive\05.1Prepare\Todo.html" />
+    <Content Include="05Directive\05.1Prepare\Todo.js" />
+    <Content Include="05Directive\05.1Prepare\Utility.js" />
     <Content Include="04Resource\Todo.html" />
     <Content Include="04Resource\Todo.js" />
     <Content Include="04Resource\Utility.js" />
