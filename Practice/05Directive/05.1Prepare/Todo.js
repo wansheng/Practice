@@ -24,9 +24,11 @@ ngTodo.controller("todoController", function ($scope, TodoOperator) {
         $scope.NewTodo.ID = "";
     };
     $scope.DeleteTodo = function (todo) {
-        TodoOperator.Helper.remove(todo);
-        var i = $scope.Todos.indexOf(todo);
-        $scope.Todos.splice(i, 1);
+        if (confirm('Are you sure?')) {
+            TodoOperator.Helper.remove(todo);
+            var i = $scope.Todos.indexOf(todo);
+            $scope.Todos.splice(i, 1);
+        }
     };
     
     $scope.RemoveCompleted = function () {
