@@ -36,15 +36,20 @@
             </tbody>
         </table>
         <ng-pluralize count="Remaining()" when="Pluralizer" ></ng-pluralize>
-
-        <form ng-submit="AddToDo()">
+        <br />
+        <br />
+        
             <input type="text" ng-model="NewTodo.Desc" placeholder="add new todo here" />
             <input type="text" ng-model="NewTodo.DueDate" placeholder="yyyy-MM-dd" />
-            <input type="submit" value="Add" />
+            
+            
+            <add-Button text="Add" action="AddToDo()"></add-Button>
             <br />
             <br />
-            <input type="button" ng-click="RemoveCompleted()" value="Remove Completed Tasks" />
-        </form>
+           
+            <!--<button type="button" ng-click="RemoveCompleted()">Remove Completed Tasks</button>-->
+            <remove-completed-button text="Remove Completed Tasks" action="RemoveCompleted()"></remove-completed-button>
+        
         {{debugResponse}}
     </div>
 </body>

@@ -16,6 +16,31 @@ ngTodo.directive("deleteButton", function () {
         template: '<button type="button" ng-click="action()">{{text}}</button>'
     };
 });
+
+ngTodo.directive("addButton", function () {
+    return {
+        restrict: "E",
+        replace: true,
+        scope: {
+            text: "@",
+            action:"&"
+        },
+        template: '<button type="button" ng-click="action()">{{text}}</button>'
+    };
+});
+
+ngTodo.directive("removeCompletedButton", function () {
+    return {
+        restrict: "E",
+        replace: true,
+        scope: {
+            text: "@",
+            action: "&"
+        },
+        template: '<button type="button" ng-click="action()">{{text}}</button>'
+    };
+});
+
 ngTodo.controller("todoController", function ($scope, TodoOperator) {
 
     $scope.Todos = [];
