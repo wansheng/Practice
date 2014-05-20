@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ngTodo">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" ></script>
+    <script src="Todo.js"></script>
+    <script src="Utility.js"></script>
+    <style>
+        .done-true {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+    <!--ACE Begin-->
+    <!-- bootstrap & fontawesome -->
+    
+    <link rel="stylesheet" href="/Ace/assets/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <link rel="stylesheet" href="/Ace/assets/css/ace-fonts.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/Ace/assets/css/ace.min.css" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="../assets/css/ace-part2.min.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="/Ace/assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="/Ace/assets/css/ace-rtl.min.css" />
+
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script src="/Ace/assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+    <script src="../assets/js/html5shiv.js"></script>
+    <script src="../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--ACE End-->
+</head>
+<body>
+    <div ng-controller="todoController">
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="todo in Todos">
+                <tr>
+                    <td><input type="checkbox" ng-model=todo.Done /></td>
+                    <td><span class="done-{{todo.Done}}">{{todo.Desc}}</span></td>
+                    <td>{{todo.DueDate | date:'fullDate'}}</td>
+                    <td><delete-button text="Remove" action="DeleteTodo(todo)"></delete-button></td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-pluralize count="Remaining()" when="Pluralizer" ></ng-pluralize>
+        <br />
+        <br />
+        
+            <input type="text" ng-model="NewTodo.Desc" placeholder="add new todo here" />
+            <input type="text" ng-model="NewTodo.DueDate" placeholder="yyyy-MM-dd" />
+            
+            
+            <add-Button text="Add" action="AddToDo()"></add-Button>
+            <br />
+            <br />
+           
+           <i class="danger"></i>
+            <remove-completed-button text="Remove Completed Tasks" action="RemoveCompleted()"></remove-completed-button>
+        
+        {{debugResponse}}
+    </div>
+</body>
+</html>
